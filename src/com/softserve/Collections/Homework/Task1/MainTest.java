@@ -87,24 +87,24 @@ public class MainTest {
 
     @Test
     public void testUnionEmpSets() {
-        Set<Emp> set1 = Set.of(
-                new Emp(2, "Bob"),
-                new Emp(4, "Dave"),
-                new Emp(5, "Eve")
+        Set<Employee> set1 = Set.of(
+                new Employee(2, "Bob"),
+                new Employee(4, "Dave"),
+                new Employee(5, "Eve")
         );
-        Set<Emp> set2 = Set.of(
-                new Emp(1, "Bob"),
-                new Emp(4, "Dave"),
-                new Emp(5, "Eve"),
-                new Emp(6, "Mark")
+        Set<Employee> set2 = Set.of(
+                new Employee(1, "Bob"),
+                new Employee(4, "Dave"),
+                new Employee(5, "Eve"),
+                new Employee(6, "Mark")
         );
-        Set<Emp> result = union(set1, set2);
-        Set<Emp> expected = Set.of(
-                new Emp(2, "Bob"),
-                new Emp(4, "Dave"),
-                new Emp(5, "Eve"),
-                new Emp(1, "Bob"),
-                new Emp(6, "Mark")
+        Set<Employee> result = union(set1, set2);
+        Set<Employee> expected = Set.of(
+                new Employee(2, "Bob"),
+                new Employee(4, "Dave"),
+                new Employee(5, "Eve"),
+                new Employee(1, "Bob"),
+                new Employee(6, "Mark")
         );
 
         assertEquals("Union of sets with mixed data types should have all unique employees", expected, result);

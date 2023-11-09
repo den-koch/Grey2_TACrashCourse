@@ -1,18 +1,14 @@
 package com.softserve.Collections.Homework.Task3;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> students = new ArrayList<>(List.of(
-                new Student("Ivan", 2),
-                new Student("Slavik", 2),
-                new Student("Misha", 3),
-                new Student("Pasha", 3),
-                new Student("Grisha", 1),
-                new Student("Ann", 2)
-        ));
+        run();
+    }
+
+    public static void run() {
+        List<Student> students = createStudentList();
 
         printStudents(students, 2);
 
@@ -45,6 +41,18 @@ public class Main {
                 .forEach(System.out::println);
     }
 
+    public static List<Student> createStudentList() {
+        return List.of(
+                new Student("Ivan", 2),
+                new Student("Slavik", 2),
+                new Student("Misha", 3),
+                new Student("Pasha", 3),
+                new Student("Grisha", 1),
+                new Student("Ann", 2)
+        );
+    }
+
+    
 //    Task asked to do via iterator, so there is solution via iterator
 //    public static void printStudentsByIterator(List<Student> students, Integer course) {
 //        Iterator<Student> iterator = students.iterator();

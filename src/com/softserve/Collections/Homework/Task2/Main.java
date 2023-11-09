@@ -5,29 +5,22 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        Map<String, String> pMap = new HashMap<>();
-        pMap.put("Holotsvan", "Ivan");
-        pMap.put("Doe", "Jhon");
-        pMap.put("Smith", "Jhonson");
-        pMap.put("Swift", "Taylor");
-        pMap.put("Great", "Davidos");
-        pMap.put("Mazepa", "Ivanna");
-        pMap.put("Jones", "Mary");
-        pMap.put("Don", "Jhonenko");
-        pMap.put("Williams", "David");
-        pMap.put("Fisher", "Alex");
+        run();
+    }
 
-        printPMap(pMap);
-        System.out.println("\n");
-        System.out.println(isDuplicatedFirstName(pMap)
-                ? "There are duplicated first names"
-                : "There are not duplicated first names");
+    public static void run() {
+        Map<String, String> peopleMap = createPeopleMap();
 
+        printPMap(peopleMap);
         System.out.println("\n");
 
-        removePersonsWithFirstName(pMap, "Ivan");
-        printPMap(pMap);
+        System.out.println(isDuplicatedFirstName(peopleMap)
+                ? "There are duplicated first names" + "\n"
+                : "There are not duplicated first names" + "\n");
 
+        removePersonsWithFirstName(peopleMap, "Ivan");
+
+        printPMap(peopleMap);
 
     }
 
@@ -41,5 +34,21 @@ public class Main {
 
     public static void removePersonsWithFirstName(Map<String, String> pMap, String firstName) {
         pMap.entrySet().removeIf(entry -> firstName.equals(entry.getValue()));
+    }
+
+    public static Map<String, String> createPeopleMap() {
+        Map<String, String> peopleMap = new HashMap<>();
+        peopleMap.put("Holotsvan", "Ivan");
+        peopleMap.put("Doe", "Jhon");
+        peopleMap.put("Smith", "Jhonson");
+        peopleMap.put("Swift", "Taylor");
+        peopleMap.put("Great", "Davidos");
+        peopleMap.put("Mazepa", "Ivanna");
+        peopleMap.put("Jones", "Mary");
+        peopleMap.put("Don", "Jhonenko");
+        peopleMap.put("Williams", "David");
+        peopleMap.put("Fisher", "Alex");
+        return peopleMap;
+
     }
 }

@@ -12,16 +12,16 @@ public class Main {
         Set<String> setStr1 = new HashSet<>(Set.of("apple", "banana", "kiwi", "dog", "cat"));
         Set<String> setStr2 = new HashSet<>(Set.of("apple", "eagle", "man", "kiwi", "dog"));
 //      Emp sets
-        Set<Emp> setEmp1 = new HashSet<>(Set.of(
-                new Emp(2, "Bob"),
-                new Emp(4, "Dave"),
-                new Emp(5, "Eve")
+        Set<Employee> setEmp1 = new HashSet<>(Set.of(
+                new Employee(2, "Bob"),
+                new Employee(4, "Dave"),
+                new Employee(5, "Eve")
         ));
-        Set<Emp> setEmp2 = new HashSet<>(Set.of(
-                new Emp(1, "Bob"),
-                new Emp(4, "Dave"),
-                new Emp(5, "Eve"),
-                new Emp(6, "Mark")
+        Set<Employee> setEmp2 = new HashSet<>(Set.of(
+                new Employee(1, "Bob"),
+                new Employee(4, "Dave"),
+                new Employee(5, "Eve"),
+                new Employee(6, "Mark")
         ));
 
         System.out.format("Union set: %s%n", union(setInt1, setInt2));

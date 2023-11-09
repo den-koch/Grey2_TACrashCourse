@@ -2,11 +2,11 @@ package com.softserve.Collections.Homework.Task1;
 
 import java.util.Objects;
 
-public class Emp {
+public class Employee {
     private int id;
     private String name;
 
-    public Emp(int id, String name) {
+    public Employee(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -31,7 +31,7 @@ public class Emp {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Emp emp = (Emp) o;
+        Employee emp = (Employee) o;
         return id == emp.id && Objects.equals(name, emp.name);
     }
 
