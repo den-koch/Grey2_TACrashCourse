@@ -25,7 +25,7 @@ public class Main {
         printUsersWithName(empMap);
 
         SCANNER.nextDouble();
-        
+
 
     }
 
