@@ -44,6 +44,8 @@ public class Main {
                 .sorted(StudentComparator::compareStudentsByCourse)
                 .forEach(System.out::println);
     }
+
+//    Task asked to do via iterator, so there is solution via iterator
 //    public static void printStudentsByIterator(List<Student> students, Integer course) {
 //        Iterator<Student> iterator = students.iterator();
 //

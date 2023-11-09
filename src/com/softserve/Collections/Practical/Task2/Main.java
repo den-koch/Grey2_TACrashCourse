@@ -23,6 +23,10 @@ public class Main {
         System.out.println(empMap);
         printUserById(empMap);
         printUsersWithName(empMap);
+
+        SCANNER.nextDouble();
+        
+
     }
 
     public static void printUserById(Map<Integer, String> map) {
