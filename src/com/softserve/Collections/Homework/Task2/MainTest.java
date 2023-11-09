@@ -66,6 +66,7 @@ class MainTest {
         pMap.put("Petrov", "Oksana");
         pMap.put("Koval", "Vasyl");
         pMap.put("Sydorov", "Mariya");
+        
         int expectedSize = pMap.size();
 
         removePersonsWithFirstName(pMap, "Yuriy");

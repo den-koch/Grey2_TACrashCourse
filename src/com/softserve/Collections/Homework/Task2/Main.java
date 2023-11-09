@@ -36,7 +36,7 @@ public class Main {
     }
 
     public static boolean isDuplicatedFirstName(Map<String, String> pMap) {
-        return pMap.values().stream().distinct().count() != pMap.values().stream().count();
+        return pMap.values().stream().distinct().count() != pMap.size();
     }
 
     public static void removePersonsWithFirstName(Map<String, String> pMap, String firstName) {

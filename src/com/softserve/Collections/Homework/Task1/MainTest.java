@@ -5,7 +5,8 @@ import org.junit.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.softserve.Collections.Homework.Task1.Main.*;
+import static com.softserve.Collections.Homework.Task1.Main.intersect;
+import static com.softserve.Collections.Homework.Task1.Main.union;
 import static org.junit.Assert.assertEquals;
 
 public class MainTest {
@@ -86,12 +87,12 @@ public class MainTest {
 
     @Test
     public void testUnionEmpSets() {
-        Set<Main.Emp> set1 = Set.of(
+        Set<Emp> set1 = Set.of(
                 new Emp(2, "Bob"),
                 new Emp(4, "Dave"),
                 new Emp(5, "Eve")
         );
-        Set<Main.Emp> set2 = Set.of(
+        Set<Emp> set2 = Set.of(
                 new Emp(1, "Bob"),
                 new Emp(4, "Dave"),
                 new Emp(5, "Eve"),

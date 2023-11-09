@@ -8,4 +8,5 @@ public class StudentComparator {
     public static int compareStudentsByCourse(Student student1, Student student2) {
         return student1.getCourse() - student2.getCourse();
     }
+
 }
